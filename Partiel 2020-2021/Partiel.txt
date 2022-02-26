@@ -1,0 +1,80 @@
+Alexis Brunet TD3
+Exercice 1
+La fonction f retourne un float, et prend en paramètre un entier.
+
+Fonction réel fmax(entier a, entier b):
+Début :
+    variable entier i
+    variabel float max
+    max <- f(a)
+    Pour i allant de a à b inclus par pas de 1
+        si f(i)>max
+            max <- f(i)
+        fin si
+    fin pour
+    Retourner max
+Fin Fonction
+
+Fonction réel df(entier t):
+Début:
+    Retourner 4,2*t+1,8
+Fin Fonction
+
+Fonction réel dfmax(entier a, entier b):
+Début:
+    variable entier i
+    variabel float max
+    max <- df(a)
+    Pour i allant de a à b inclus par pas de 1
+        si df(i)>max
+            max <- df(i)
+        fin si
+    fin pour 
+    Retourner max
+Fin Fonction
+
+
+Exercice 2
+Fonction entier compter(char x, pointeur sur chaine de caractère res, entier N):
+Début :
+    variable entier i
+    variable entier resultat <-O
+    pour i allant de 0 jusqu'a N exclu par pas de 1
+        si res[i]==x
+            resultat <- resultat +1
+        fin si 
+    fin pour
+    retourner resultat
+Fin fonction
+
+
+Fonction réel taux_reussie(pointeur sur chaine de caractère res, entier N)
+Début:
+    Variable entier a <- compter('A',res,N)
+    Variable entier D <- compter('D',res,N)
+    Variable entier C <- compter('C',res,N)
+    Variable entier B <- compter('B',res,N)
+    Retourner (float)(a+b+c+d)/(float)N*100
+Fin Fonction
+
+Fonction void ecrire_num_reussi(pointeur sur tableau d'entier tab, pointeur sur entier num, pointeur sur tableau de caractère res, entier N):
+Début:
+    variable entier i
+    variable entier j<-0
+    Pour i allant de 0 à N par pas de 1
+        selon (res[i])
+            cas 'A'
+                tab[j] = num[i]
+                i += 1
+            cas 'B'
+                tab[j] = num[i]
+                i += 1
+            cas 'C'
+                tab[j] = num[i]
+                i += 1
+            cas 'D'
+                tab[j] = num[i]
+                i += 1
+        fin selon 
+    fin pour
+fin fonction
